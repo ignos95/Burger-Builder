@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Aux from "../../../hoc/Auxilary"
 import Button from '../../UI/Button/Button'
 
 const OrderSummary=(props)=>{
-    
-    useEffect(()=>{console.log('[use Effect]')})
 
     const ingrList=Object.keys(props.ingredients)
                             .map( ingr=> <li key={ingr}>
@@ -24,7 +22,7 @@ const OrderSummary=(props)=>{
             <p><strong>Total Price : ₹ {props.totalPrice.toFixed(2)}</strong></p>
             <p>Continue to checkout?</p>
             <Button btntype={'Danger'} clicked={props.purchaseCancelled}>Cancel</Button>
-            <Button btntype={'Success'} clicked={props.purchaseContinue}>Continue</Button> 
+            <Button btntype={'Success'} clicked={props.purchaseContinue}>Confirm</Button> 
         </Aux>
     )
 }

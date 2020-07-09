@@ -5,16 +5,9 @@ import Backdrop from '../Backdrop/Backdrop'
 
 
 class Modal extends Component{
-    /*let disp=null
-    if(props.Disp){
-     disp= <div className={classes.Modal}>
-                {props.children}
-              </div>
-    }
-    */
 
   shouldComponentUpdate(nxtProps){
-    return (this.props.show!==nxtProps.show)
+    return (this.props.show!==nxtProps.show || this.props.children!==nxtProps.children)
   }
 
   render(){

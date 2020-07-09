@@ -16,18 +16,16 @@ const Burger = (props) =>{
                                                                                        ) 
                                     } 
                          )
-                        
-console.log(ingr)
 
- ingr=ingr.reduce((arr,elem)=>{ return arr.concat(elem) },[])
- if(ingr.length===0){
-                     ingr=<p>Please start adding Ingredients!</p>
-                    }
-
- return <div className={classes.Burger}>
-          <BurgerIngredient type='bread-top'/>
-          {ingr}
-          <BurgerIngredient type='bread-bottom'/>
-        </div>
+  ingr=ingr.reduce((arr,elem)=>{ return arr.concat(elem) },[])
+  if(ingr.length===0){
+                      ingr=<p>Please start adding Ingredients!</p>
+                     }
+ 
+  return <div className={classes.Burger}>
+           <BurgerIngredient type='bread-top'/>
+           {ingr}
+           <BurgerIngredient type='bread-bottom'/>
+         </div>
 }
 export default Burger
